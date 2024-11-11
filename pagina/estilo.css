@@ -1,0 +1,224 @@
+/* Archivo: estilo.css */
+
+/* Variables de colores */
+:root {
+    --color-primario: #008000;   /* Color de fondo para botones */
+    --color-verde: #008000;      /* Verde para el menú y "UTLVTE" */
+    --color-rojo: #06af06;       /* Rojo para "TU UNIVERSIDAD" */
+    --color-texto: #333;         /* Color del texto */
+    --color-blanco: #ffffff;     /* Color blanco */
+}
+
+/* Reseteo de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--color-texto);
+}
+
+/* Encabezado */
+header {
+    background-color: var(--color-blanco);
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 1000px;
+    height: auto;
+}
+
+.text-container {
+    text-align: center;
+}
+
+.utlvte {
+    color: var(--color-verde);
+    font-size: 2rem;
+}
+
+.lema {
+    color: var(--color-rojo);
+    font-size: 1rem;
+    margin: 5px 0 0 0;
+}
+
+.sede {
+    font-weight: bold;
+    color: var(--color-verde);
+    margin-top: 5px;
+}
+
+/* Menú de navegación */
+nav {
+    background-color: var(--color-verde);
+    width: 100%;
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+    margin: 0;
+}
+
+nav ul li a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--color-rojo);
+    
+}
+
+
+/* Estilos de bienvenida */
+body {
+    font-family: 'Roboto', sans-serif; /* Aplicar Roboto a toda la página */
+    color: var(--color-texto);
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.welcome h2 {
+    font-size: 2.5rem; /* Ajuste de tamaño de letra para que se parezca a la imagen */
+    font-weight: 700;   /* Negrita */
+    color: var(--color-texto);
+    margin-bottom: 10px;
+    line-height: 1.2;   /* Espaciado entre líneas */
+}
+
+.welcome p {
+    font-size: 1.2rem;  /* Tamaño del texto */
+    line-height: 1.6;   /* Espaciado entre líneas para mejorar legibilidad */
+    max-width: 800px;   /* Ancho máximo para que el texto no sea demasiado largo */
+    margin: 0 auto;     /* Centra el párrafo */
+    color: var(--color-texto);
+}
+
+
+/* Sección de nuestro campus */
+.campus {
+    position: relative;
+    
+}
+
+.campus-image {
+    width: 100%;
+    height: 600px; /* Ajusta la altura para que ocupe más espacio vertical */
+  
+}
+
+.overlay {
+    position: absolute;
+    top: 60%;
+    left: 6%;
+    background-color: rgba(0, 0, 0, 0.063);
+    padding: 50px 100px;
+    border-radius: 8px;
+}
+
+.overlay h2 {
+    font-size: 2.5rem;
+    color: var(--color-blanco);
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.overlay .button {
+    background-color: var(--color-primario);
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--color-blanco);
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.overlay .button:hover {
+    background-color: var(--color-verde);
+}
+
+/* Pie de página */
+footer {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 15px;
+}
+.carreras-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+}
+
+.carrera {
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.carrera:hover {
+    transform: scale(1.05);
+}
+
+.carrera img {
+    width: 100%;
+    height: auto;
+    border-bottom: none;
+}
+
+.carrera-info {
+    padding: 10px;
+    background-color: rgba(0, 128, 0, 0.8); /* Color verde translúcido */
+    color: white;
+}
+
+.carrera-info h3 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.ver-mas {
+    display: inline-block;
+    margin-top: 10px;
+    color: #228B22; /* Verde */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.ver-mas:hover {
+    color: #006400; /* Verde más oscuro al pasar el ratón */
+}
+

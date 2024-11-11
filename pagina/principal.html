@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voces de la Academia</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.carousel {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.carousel-item {
+    display: none;
+    text-align: center;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.carousel-control.prev {
+    left: -10px;
+}
+
+.carousel-control.next {
+    right: -10px;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.author img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+/* Centered Video */
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.video-container iframe {
+    border: none;
+    width: 80%;
+    max-width: 560px;
+    height: 315px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #222;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.audio, .social, .stats {
+    text-align: center;
+}
+
+.audio p, .social p, .stats p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.audio audio {
+    display: block;
+    margin: 5px 0;
+    width: 100px;
+}
+
+.social button {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.social button:hover {
+    background-color: #777;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>VOCES DE LA ACADEMIA</h1>
+            
+            <!-- Carousel for Quotes and Images -->
+            <div class="carousel">
+                <div class="carousel-item active">
+                    <p class="quote">
+                        <i>“La comunicación tiene que ser la principal herramienta a emplearse en la academia, a fin de hacer de la relación docente - estudiante una interacción que permita el adecuado y efectivo proceso de transferencia de conocimientos”</i>
+                    </p>
+                </div>
+                <div class="carousel-item">
+                    <p class="quote">
+                        <i>“La sociedad actual demanda competencias que aporten al desarrollo y competitividad internacional.”</i>
+                    </p>
+                </div>
+                
+                <!-- Carousel Controls -->
+                <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+                <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+            </div>
+
+            <div class="author">
+                <img src="puyol.png" alt="Jorge Perea Vaca">
+                <p>Lic. Jorge Perea Vaca, MSc.</p>
+            </div>
+        </div>
+
+        <!-- Embedded YouTube Video -->
+        
+
+        <div class="footer">
+            <div class="audio">
+                <p>MAESTRIAS UTLVTE</p>
+                <audio controls>
+                    <source src="audio1.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+              
+            </div>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="social">
+                <p>Universidad Técnica</p>
+                <button>Followed</button>
+                <button>Share</button>
+            </div>
+            
+            <div class="stats">
+                <p>N° DE VISITAS</p>
+                <p id="visits">0</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Carousel Functionality
+let currentSlide = 0;
+const slides = document.getElementsByClassName("carousel-item");
+
+function showSlide(index) {
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
+    }
+    slides[index].classList.add("active");
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+}
+
+// Initialize carousel
+showSlide(currentSlide);
+
+// Simulate number of visits
+let visits = 0;
+function updateVisits() {
+    visits += Math.floor(Math.random() * 10 + 1);
+    document.getElementById('visits').textContent = visits;
+}
+setInterval(updateVisits, 2000); // Update visits every 2 seconds
+
+    </script>
+</body>
+</html>

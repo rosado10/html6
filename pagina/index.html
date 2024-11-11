@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universidad Técnica Luis Vargas Torres</title>
+    <link rel="stylesheet" href="estilo.css"> <!-- Enlace al CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    h1 {
+    text-align: center;
+}
+
+#carrusel-caja {
+    -moz-animation: automatizacion 15s infinite linear;
+    -o-animation: automatizacion 15s infinite linear;
+    -webkit-animation: automatizacion 15s infinite linear;
+    animation: automatizacion 15s infinite linear;
+
+    -webkit-transition: all 0.75s ease;
+    -moz-transition: all 0.75s ease;
+    -ms-transition: all 0.75s ease;
+    -o-transition: all 0.75s ease;
+    transition: all 0.75s ease;
+
+    height: 500px;
+    width: 300%;
+}
+
+#carrusel-contenido {
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: left;
+}
+
+.imagenes{
+    height: 500px;
+    width: 100%;
+}
+
+.carrusel-elemento {
+    float: left;
+    width: 33.333%;
+}
+
+@-moz-keyframes automatizacion {
+    0% {
+        margin-left: 0;
+    }
+
+    30% {
+        margin-left: 0;
+    }
+
+    35% {
+        margin-left: -100%;
+    }
+
+    65% {
+        margin-left: -100%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+
+    95% {
+        margin-left: -200%;
+    }
+
+    100% {
+        margin-left: 0;
+    }
+}
+
+@-webkit-keyframes automatizacion {
+    0% {
+        margin-left: 0;
+    }
+
+    30% {
+        margin-left: 0;
+    }
+
+    35% {
+        margin-left: -100%;
+    }
+
+    65% {
+        margin-left: -100%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+
+    95% {
+        margin-left: -200%;
+    }
+
+    100% {
+        margin-left: 0;
+    }
+}
+
+@keyframes automatizacion {
+    0% {
+        margin-left: 0;
+    }
+
+    30% {
+        margin-left: 0;
+    }
+
+    35% {
+        margin-left: -100%;
+    }
+
+    65% {
+        margin-left: -100%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+
+    95% {
+        margin-left: -200%;
+    }
+
+    100% {
+        margin-left: 0;
+    }
+}
+.grid-container {
+    display: grid;
+    gap: 10px;
+    padding: 20px;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas en pantallas grandes */
+}
+
+.grid-item {
+    background-color: #0d800d; /* Color de fondo verde */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+.grid-item h2 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.grid-item1 {
+    background-color: #f4f4f4; /* Color de fondo verde */
+   
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+.grid-item1 h2 {
+    margin-bottom: 10px;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: rgb(18,110,27);
+}
+
+.grid-item p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Responsive para pantallas medianas (tablet) */
+@media (max-width: 992px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
+    }
+}
+
+/* Responsive para pantallas pequeñas (teléfono) */
+@media (max-width: 576px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
+    }
+}
+/* Archivo: estilo.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.comunidad {
+    text-align: center;
+    padding: 20px;
+}
+
+.comunidad h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+/* Estilos para la cuadrícula de imágenes */
+.grid-imagenes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 0 20px;
+}
+
+.imagen-item {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+.imagen-item span {
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Estilos para la sección "¿Por qué elegirnos?" */
+.porque-elegirnos {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f8f8f8;
+}
+
+.porque-elegirnos h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.porque-elegirnos p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+    .grid-imagenes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .grid-imagenes {
+        grid-template-columns: 1fr;
+    }
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: rgb(18,110,27);
+    padding: 10px;
+}
+
+.navbar-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-item {
+    position: relative;
+    margin: 0 15px;
+}
+
+.navbar-item > a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    font-weight: bold;
+}
+
+/* Estilos para el menú desplegable */
+.dropdown {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    display: none;
+    padding: 0;
+    margin: 0;
+    min-width: 150px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown li {
+    background-color: rgb(18,110,27);
+}
+
+.dropdown li:last-child {
+    border-bottom: none;
+}
+
+.dropdown li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    font-size: 0.9rem;
+}
+
+.dropdown li a:hover {
+    background-color: rgb(18,110,27);
+}
+
+/* Mostrar el menú desplegable al pasar el mouse */
+.navbar-item:hover .dropdown {
+    display: block;
+}
+
+/* Efectos de hover */
+.navbar-item > a:hover {
+    background-color: rgb(18,110,27);
+    color: #fff;
+    border-radius: 4px;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+   
+
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 24px;
+    margin: 0;
+    color: #fff;
+}
+
+.carousel {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.carousel-item {
+    display: none;
+    text-align: center;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.carousel-control.prev {
+    left: -10px;
+}
+
+.carousel-control.next {
+    right: -10px;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.author img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+/* Centered Video */
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.video-container iframe {
+    border: none;
+    width: 80%;
+    max-width: 560px;
+    height: 315px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #222;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.audio, .social, .stats {
+    text-align: center;
+}
+
+.audio p, .social p, .stats p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.audio audio {
+    display: block;
+    margin: 5px 0;
+    width: 100px;
+}
+
+.social button {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.social button:hover {
+    background-color: #777;
+}
+</style>
+</head>
+<body>
+
+    <!-- Encabezado con logo, texto y menú de navegación -->
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="logo10.png" alt="Logo Universidad Técnica Luis Vargas Torres" class="logo">
+              
+            </div>
+            <div class="sede">SEDE SANTO DOMINGO DE LOS TSÁCHILAS</div>
+            <nav class="navbar">
+                <ul class="navbar-list">
+                    <li class="navbar-item">
+                        <a href="#">Principal</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#">Universidad</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Información General</a></li>
+                            <li><a href="#">NUESTRA SEDE</a></li>
+                            <li><a href="#">Autoridades</a></li>
+                            <li><a href="#">Marco Legal</a></li>
+                            <li><a href="#">Nuestro Patrono</a></li>
+                        </ul>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#">Carreras</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Administración de Empresas</a></li>
+                            <li><a href="#">Contabilidad y Auditoría</a></li>
+                            <li><a href="#">Tecnologías de la Información</a></li>
+                        </ul>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#">Investigación</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Vicerrectorado de Investigación</a></li>
+                            <li><a href="#">Repositorio de Tesis</a></li>
+                        </ul>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#">Vinculación</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Vinculación</a></li>
+                        </ul>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#">Admisión</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#">Biblioteca</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <br><br>
+    <!-- Sección de nuestro campus -->
+    <main>
+      <div id="carrusel-contenido">
+            <div id="carrusel-caja">
+                <div class="carrusel-elemento">
+                    <img class="imagenes" src="carrecel2.jpg" >
+                    <div class="overlay">
+                        <h2>NUESTRO CAMPUS</h2>
+                        <a href="#" class="button">LEER MÁS</a>
+                    </div>
+                </div>
+                <div class="carrusel-elemento">   
+                    <img class="imagenes" src="carrucel3.jpg">
+                    <div class="overlay">
+                        <h2>NUESTRO CAMPUS</h2>
+                        <a href="#" class="button">LEER MÁS</a>
+                    </div>
+                </div>
+                <div class="carrusel-elemento">   
+                    <img class="imagenes" src="imagen.jpg">   
+                    <div class="overlay">
+                        <h2>NUESTRO CAMPUS</h2>
+                        <a href="#" class="button">LEER MÁS</a>
+                    </div>                     
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Sección principal de bienvenida -->
+
+    <div class="grid-container">
+        <div class="grid-item">
+            <h2>EVALUACIÓN</h2>
+            <p>Proceso de evaluación de la calidad universitaria</p>
+        </div>
+        <div class="grid-item">
+            <h2>BIENESTAR UNIVERSITARIO</h2>
+            <p>Conoce los procesos de bienestar de la comunidad universitaria.</p>
+        </div>
+        <div class="grid-item">
+            <h2>SOPORTE ACADÉMICO</h2>
+            <p>Aquí encontrarás: Formularios, sílabos, calendarios además de códigos y horarios de los Centros de Apoyo Académico</p>
+        </div>
+        <div class="grid-item">
+            <h2>SERVICIOS EN LÍNEA</h2>
+            <p>Este es el acceso a los sistemas para estudiantes, docentes y servidores universitarios.</p>
+        </div>
+    </div>
+
+<main>
+    <section class="welcome">
+        <h2>Bienvenidos a la Universidad Técnica "Luis Vargas </h2>
+        <h2>Torres" Sede Santo Domingo - La Concordia</h2>
+        <p>La Sede Santo Domingo de los Tsáchilas ubicada en La Concordia, trabaja desde 1994 en la formación de profesionales de alto nivel con sentido de pertinencia, críticos, propositivos y humanistas enfocados en el desarrollo sostenible de la sociedad.</p>
+    </section>
+</main>
+
+<div class="grid-container">
+    <div class="grid-item1">
+        <h2>53</h2>
+        <p>años de fundacion</p>
+    </div>
+    <div class="grid-item1">
+        <h2>10,895</h2>
+        <p>Estudiantes</p>
+    </div>
+    <div class="grid-item1">
+        <h2>15,855</h2>
+        <p>Libros fisicos en la biblioteca</p>
+    </div>
+    <div class="grid-item1">
+        <h2>116,000</h2>
+        <p>Libros virtuales</p>
+    </div>
+</div>
+<br>
+
+
+<section class="comunidad">
+    <h1>SIEMPRE EN CONTACTO CON LA COMUNIDAD</h1>
+    <p class="subtitulo">Espacio creado con la finalidad de mantener a la comunidad universitaria informada de noticias, eventos y comunicados relacionados con su diario acontecer</p>
+    
+    <div class="grid-imagenes">
+        <div class="imagen-item" style="background-image: url('noticias.jpg');">
+            <span>NOTICIAS</span>
+        </div>
+        <div class="imagen-item" style="background-image: url('merecimiento.jpg');">
+            <span>MERECIMIENTO Y OPOSICIÓN</span>
+        </div>
+        <div class="imagen-item" style="background-image: url('apoyo.jpg');">
+            <span>CENTROS DE APOYO ACADÉMICO</span>
+        </div>
+        <div class="imagen-item" style="background-image: url('biblioteca.jpg');">
+            <span>BIBLIOTECA</span>
+        </div>
+    </div>
+</section>
+
+
+<div class="header">
+    <h1>VOCES DE LA ACADEMIA</h1>
+    
+    <!-- Carousel for Quotes and Images -->
+    <div class="carousel">
+        <div class="carousel-item active">
+            <p class="quote">
+                <i>“La comunicación tiene que ser la principal herramienta a emplearse en la academia, a fin de hacer de la relación docente - estudiante una interacción que permita el adecuado y efectivo proceso de transferencia de conocimientos”</i>
+            </p>
+        </div>
+        <div class="carousel-item">
+            <p class="quote">
+                <i>“La sociedad actual demanda competencias que aporten al desarrollo y competitividad internacional.”</i>
+            </p>
+        </div>
+        <div class="author">
+            <img src="puyol.png" alt="Jorge Perea Vaca">
+            <p>Lic. Jorge Perea Vaca, MSc.</p>
+        </div>
+        <!-- Carousel Controls -->
+        <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+        <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+  
+</div>
+
+<!-- Embedded YouTube Video -->
+
+
+<div class="footer">
+    <div class="audio">
+        <p>MAESTRIAS UTLVTE</p>
+        <audio controls>
+            <source src="audio1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+      
+    </div>
+    <div class="video-container">
+        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Futelvtsd%2Fposts%2Fpfbid0JNV6GdDfAib9jSyekDRFDBQRXb3gMqNqvTbxpEASviGjzfdciHh2AFDG9sFk2dbbl&show_text=true&width=500" width="500" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+    </div>
+    <div class="social">
+        <p>Universidad Técnica</p>
+        <button>Followed</button>
+        <button>Share</button>
+    </div>
+    
+    <div class="stats">
+        <p>N° DE VISITAS</p>
+        <p id="visits">0</p>
+    </div>
+</div>
+
+
+<section class="porque-elegirnos">
+    <h2>¿POR QUÉ ELEGIRNOS?</h2>
+    <p>La Universidad Técnica “Luis Vargas Torres” de Esmeraldas se ha convertido en el centro de educación superior público insigne de la Provincia y del norte del País, otorgando al alumnado beneficios como: inclusión social, gratuidad de la educación, diversidad académica y amplios ambientes de aprendizaje.</p>
+</section>
+<script>
+    // Carousel Functionality
+let currentSlide = 0;
+const slides = document.getElementsByClassName("carousel-item");
+
+function showSlide(index) {
+for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("active");
+}
+slides[index].classList.add("active");
+}
+
+function nextSlide() {
+currentSlide = (currentSlide + 1) % slides.length;
+showSlide(currentSlide);
+}
+
+function prevSlide() {
+currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+showSlide(currentSlide);
+}
+
+// Initialize carousel
+showSlide(currentSlide);
+
+// Simulate number of visits
+let visits = 0;
+function updateVisits() {
+visits += Math.floor(Math.random() * 10 + 1);
+document.getElementById('visits').textContent = visits;
+}
+setInterval(updateVisits, 2000); // Update visits every 2 seconds
+
+</script>
+
+
+    <!-- Pie de página -->
+    <footer>
+        <p>2024, Universidad Técnica Luis Vargas Torres, Todos los derechos reservados 2022.</p>
+    </footer>
+
+</body>
+</html>
